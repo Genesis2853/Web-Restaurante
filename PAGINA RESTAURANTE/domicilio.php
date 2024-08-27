@@ -53,7 +53,7 @@ $casa = $_POST["N_Casa"];
 		
 		
 		<nav class="nav-header inline">
-		<a href="restaurante.html" class="nav-h-inicio">Inicio</a>
+		<a href="index.html" class="nav-h-inicio">Inicio</a>
 		<a href="MENU.html" class="nav-h-menu">Menú</a>
 		<a href="QUIENESSOMOS.html" class="nav-h-somos">Quienes somos</a>
 		<a href="CONTACTO.html" class="nav-h-contacto">Contacto</a>
@@ -86,7 +86,7 @@ $casa = $_POST["N_Casa"];
 
 		<div class="contenedor-boton-pedirdomicilio">
 		
-		<a href="restaurante.html"><button class="boton-pedirdomicilio">Volver al Inicio</button></a>
+		<a href="index.html"><button class="boton-pedirdomicilio">Volver al Inicio</button></a>
 		</div>
 		
 		</div>
@@ -127,7 +127,7 @@ $casa = $_POST["N_Casa"];
 		<div class="div-seccion-navegacion">
 		<article class="nav-footer-color">Sigue navegando</article>
 		<nav class="nav-footer inline">
-		<a href="restaurante.html" class="nav-f-inicio">
+		<a href="index.html" class="nav-f-inicio">
 		<i class="fa-solid fa-circle"></i>
 		Inicio</a>
 		<a href="MENU.html" class="nav-f-menu">

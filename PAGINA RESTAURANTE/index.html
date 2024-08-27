@@ -1,38 +1,3 @@
-<?php
-
-$host = "localhost";
-$user = "root";
-$pass = "";
-$bd = "formulario_reservacion";
-
-$connection = mysqli_connect($host,$user,$pass,$bd);
-
-
-if(isset($_POST['boton_sumit'])){
-		
-$fecha = $_POST['FECHA_RESERVA'];
-$hora = $_POST["HORA_RESERVA"];
-$n_clientes = $_POST["N°_COMENSALES"];
-$nombre = $_POST["NOMBRE_CLIENTE"];
-$apellido = $_POST["APELLIDO_CLIENTE"];
-$email = $_POST["CORREO_CLIENTE"];
-$telefono = $_POST["TLF_CLIENTE"];
-$comentario = $_POST["COMENTARIO_CLIENTE"];
-$condicion = $_POST["ACEPTACION_TERMINOS"];
-
-
-  
-		
-		$insertarDatos= "INSERT INTO datos_cliente_reserva VALUES ('','$fecha','$hora','$n_clientes','$nombre','$apellido','$email','$telefono','$comentario','$condicion')";
-		
-		$ejecutarInsertar= mysqli_query($connection,$insertarDatos);
-	}
- 
-	echo ("¡Su reservación de mesa fue exitosa!");
-
-
-
-?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -59,7 +24,7 @@ $condicion = $_POST["ACEPTACION_TERMINOS"];
 		
 		
 		<nav class="nav-header inline">
-		<a href="index.html" class="nav-h-inicio">Inicio</a>
+		<a href="restaurante.html" class="nav-h-inicio">Inicio</a>
 		<a href="MENU.html" class="nav-h-menu">Menú</a>
 		<a href="QUIENESSOMOS.html" class="nav-h-somos">Quienes somos</a>
 		<a href="CONTACTO.html" class="nav-h-contacto">Contacto</a>
@@ -73,38 +38,101 @@ $condicion = $_POST["ACEPTACION_TERMINOS"];
 	<main class="main">
 	
 	<section class="section-principal">
-	
-		<section class="contenedor-titulo-principal-reserva">
-			<img src="reserva.png">
-		</section>
+		<section class="section-texto-bienvenida">
 		
+		<h1>Bienvenido a RestaurentFood, donde contamos con la mejor comida y el mejor ambiente.</h1>
+		<br>
+		<p class="texto-bienvenida-2"><strong>¡Reserva ahora o Píde a domicilio!</strong></p>
 		
-		
-		<section class="section-reserva">
-		<div id="div-contenedor-formulario">
-		
-		
-	
-	<div class="formulario-bloque-1">
-
-		<p class="reserva-oracion-indicacion">¡Su reservación de mesa fue exitosa!</p>
-		
-		<div class="contenedor-boton-siguiente">
-		<a href="index.html"><button class="boton-reservacion-siguiente">Volver al Inicio</button></a>
-		
-		</div>
-		
-		</div>
-		
-
-		
-		
+		<div>
+		<a href="reserva.html"><button class="boton-bienvenida-reserva inline"><b>Reservación</b></button></a>
+		<a href="PEDIRDOMICILIO.html"><button class="boton-bienvenida-domicilio inline"><b>Pedir a domicilio</b></button></a>
 		</div>
 		</section>
 		
 		
+		
+		<section class="section-texto-menu">
+		<img src="restaurante2.jpg" class="inline">
+		
+		<article class="article-menu inline">
+		<article class="article-menu-2">
+		<h2>Un menú variado y delicioso</h2>
+		
+		<p class="parrafo-menu">
+		Puedes ser capaz de probar y saborear nuestros platillos en la comodidad
+		de nuestras instalaciones. Ofrecemos desde desayunos y almuerzos hasta un buen ambiente 
+		en nuestro bar de bebidas exquisitas.
+		</p>
+		<a href="MENU.html"><button class="boton-sec-menu inline">Leer mas</button></a>
+		</article>
+		</article>
+		
+		</section>
+		
+		
+		<section class="section-show-imagenes">
+		<div class="div-show-imagenes">
+		<img src="desayuno.png" class="imagen-show-desayuno">
+		<p class="show-imagenes-texto-D">
+		Desayuno
+		</p>
+		</div>
+		<div class="div-show-imagenes">
+		<img src="almuerzo.png" class="imagen-show-almuerzo">
+		<article class="show-imagenes-texto-A">
+		Almuerzo
+		</article>
+		</div>
+		<div class="div-show-imagenes">
+		<img src="cena.png" class="imagen-show-cena">
+		<article class="show-imagenes-texto-C">
+		Cena
+		</article>
+		</div>
+		</section>
+		
+		
+		
+		<section class="section-texto-quienessomos">
+		<img src="restaurante2.jpg" class="img-2 inline" align="right">
+		
+		<article class="article-quienessomos inline">
+		
+		<article  class="subtitulo"><h2>¿Quienes somos?</h2></article>
+
+		<p class="parrafo-quienesomos inline">
+		Lorem ipsum dolor sit amet. Aut ducimus beatae nam dicta cupiditate 
+		in sunt reiciendis vel architecto voluptatem est dolor laudantium. Sit 
+		consequuntur officiis et laudantium debitis aut perspiciatis excepturi! Et dolorem 
+		quis qui iusto accusamus eum nobis ratione id fugiat eius.
+		</p> 
+		</article>
+
+		<a href="QUIENESSOMOS.html"><button class="boton-sec-quienessomos inline">Leer mas</button></a>
+		</section>
+		
+		
+		
+		<section class="section-video-demostrativo">
+		
+		<article class="texto-video-demostrativo">
+		
+		Lorem ipsum dolor sit amet. Est maiores deleniti et deserunt magnam vel nulla 
+		esse et harum neque sit
+		
+		
+		</article>
+		
+		<video src="https://www.youtube.com/watch?v=1WEJKNSHD4s" width="600" controls>
+		</video>
+		
+		
+		</section>
 	</section>
 	
+	<aside class="principal-">
+	</aside>
 	
 	</main>
 	<footer class="footer">
@@ -135,7 +163,7 @@ $condicion = $_POST["ACEPTACION_TERMINOS"];
 		<div class="div-seccion-navegacion">
 		<article class="nav-footer-color">Sigue navegando</article>
 		<nav class="nav-footer inline">
-		<a href="index.html" class="nav-f-inicio">
+		<a href="restaurante.html" class="nav-f-inicio">
 		<i class="fa-solid fa-circle"></i>
 		Inicio</a>
 		<a href="MENU.html" class="nav-f-menu">
